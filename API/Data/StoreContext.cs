@@ -7,5 +7,6 @@ public class StoreContext(DbContextOptions<StoreContext> options) : DbContext(op
 {
     public required DbSet<Product> Products { get; set; }
 
+    public required DbSet<Basket> Baskets {get; set;}
     
 }
