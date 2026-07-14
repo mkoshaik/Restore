@@ -7,6 +7,7 @@ import { catalogApi } from "../../features/catalog/catalogApi";
 import { basketApi } from "../../features/basket/basketApi";
 import { uiSlice } from "../layout/uiSlice";
 import { errorApi } from "../../features/about/errorApi";
+import { catalogSlice } from "../../features/catalog/catalogSlice";
 
 //using redux function to create the store
 export function configureTheStore() {
@@ -20,6 +21,7 @@ export const store = configureStore({
     [basketApi.reducerPath]: basketApi.reducer,
     counter: counterSlice.reducer,
     ui: uiSlice.reducer,
+    catalog: catalogSlice.reducer
   },
   //we're just configureing this to be used by our redux store
   middleware: (getDefaultMiddleware) =>
